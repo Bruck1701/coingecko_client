@@ -1,4 +1,6 @@
 require "coingecko_client/version"
+require 'excon'
+require 'json'
 
 module CoingeckoClient
   class Error < StandardError; end
