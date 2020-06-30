@@ -7,8 +7,8 @@ Gem::Specification.new do |spec|
   spec.email         = ["kummel@gmail.com"]
 
   
-  spec.summary       = 'coingecko API client'
-  spec.description   = 'Simple client for the coingecko API'
+  spec.summary       = 'A simple coingecko API client '
+  spec.description   = 'Simple client for the coingecko API. This is a work in progress and not all API calls are available at this time.'
   spec.homepage      = 'https://github.com/Bruck1701/coingecko_client'
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
@@ -17,7 +17,7 @@ Gem::Specification.new do |spec|
   
 
 
-  spec.metadata["allowed_push_host"] = 'http://mygemserver.com'
+  spec.metadata["allowed_push_host"] = 'https://rubygems.org'
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = "https://github.com/Bruck1701/coingecko_client"
