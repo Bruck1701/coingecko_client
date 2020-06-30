@@ -1,8 +1,7 @@
 # CoingeckoClient
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/coingecko_client`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This is my first gem and the idea was to develop a super simple and lightweight client to connect with Coingecko API. 
+I published it with the methods that I need for another project, but I'll keep on adding more methods to interact with the rest of the API. Any comments, sugestions, Pull Requests, feel free to contact me.
 
 ## Installation
 
@@ -22,7 +21,21 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Once the gem is installed, you can check the last price of a given coin calling:
+
+```
+CoingeckoClient::Client.price('bitcoin','usd')
+```
+
+To get the historical market data(price, market cap and trade volume) of a given coin, you would use:
+Note from Coingecko about this API call: Minutely data will be used for duration within 1 day, Hourly data will be used for duration between 1 day and 90 days, Daily data will be used for duration above 90 days.
+```
+CoingeckoClient::Client.coin_history(<coin>,<currency>,<number_of_days>)
+```
+
+
+
+
 
 ## Development
 
