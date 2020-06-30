@@ -9,3 +9,5 @@
 
 # rspec failure tracking
 .rspec_status
+
+coingecko_client-0.1.0.gem
