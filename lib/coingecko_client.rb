@@ -18,13 +18,16 @@ module CoingeckoClient
       return nil if result.nil?
 
       result[coin][currency]
-
     end
+
 
     def self.coin_history(coin,currency,days)
       api_call("coins/#{coin.downcase}/market_chart?vs_currency=#{currency.downcase}&days=#{days}\" -H \"accept: application/json")
     end
 
+    def self.list_exchanges
+      api_call('exchanges')
+    end
 
 
     private_class_method def self.api_call(api_request)
