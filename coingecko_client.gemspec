@@ -8,7 +8,9 @@ Gem::Specification.new do |spec|
 
   
   spec.summary       = 'A simple coingecko API client '
-  spec.description   = 'Simple client for the coingecko API. This is a work in progress and not all API calls are available at this time.'
+  spec.description   = 'This is my first gem and the idea was to develop a super simple and lightweight client to connect with Coingecko API. 
+  Keep in mind that this is by no means an oficial gem from Coingecko, it is a MIT license pet project! Use at your own discretion!
+  I published it originally with the methods that I needed for another project, but I\'ll keep on adding more methods to interact with the rest of the API. Any comments, sugestions, Pull Requests, feel free to contact me.'
   spec.homepage      = 'https://github.com/Bruck1701/coingecko_client'
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
