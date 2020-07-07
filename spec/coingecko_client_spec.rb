@@ -50,7 +50,6 @@ RSpec.describe CoingeckoClient do
 
     expect(coin_history).to have_key('total_volumes')
     expect(coin_history['total_volumes'].first.count).to eq 2
-    
   
   end
 
@@ -61,7 +60,12 @@ RSpec.describe CoingeckoClient do
     expect(exchange_info.first).to have_key('name')
     expect(exchange_info.first).to have_key('country')
     expect(exchange_info.first).to have_key('trust_score')
-
   end
+
+  it "get market data of given coins" do
+    market_data = CoingeckoClient::Client.coins_market(ids_list:['bitcoin','ethereum'] )
+    expect(market_data.count).to eq 2
+  end
+
 
 end
