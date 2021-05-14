@@ -70,6 +70,37 @@ module CoingeckoClient
       end
     end
 
+    # Returns Top 7 trending coins
+    def self.coins_trending
+      api_call("search/trending")
+    end
+
+    # Get BTC-to-currency (BTC rate against FIAT, Gold, other coins etc)
+    def self.btc_to_currency
+      api_call("exchange_rates")
+    end
+
+    # Get global data of coins (Total market cap, active coins, market cap percentage)
+    def self.global
+      api_call("global")
+    end
+
+    # Get global data for decentralized finance aka defi
+    def self.global_defi
+      api_call("global/decentralized_finance_defi")
+    end
+
+    # Get status updates from coin maintainers and exchanges
+    def self.status_updates(category: 'general',
+                            project_type: '',
+                            per_page: 100,
+                            page: 1)
+      # If project_type empty returns statuses from both coins/markets
+      request = "status_updates/?category=#{category}"
+      request += "&project_type=#{project_type}&per_page=#{per_page}&page=#{page}"
+      api_call(request)
+    end
+
     private_class_method def self.api_call(api_request)
       endpoint_head = 'https://api.coingecko.com/api/v3/'
       url = endpoint_head + api_request
