@@ -67,5 +67,41 @@ RSpec.describe CoingeckoClient do
     expect(market_data.count).to eq 2
   end
 
+  it "gets trending coins" do
+    trending_coins = CoingeckoClient::Client.coins_trending
+    expect(trending_coins).not_to be nil
+    expect(trending_coins).to have_key("coins")
+  end
 
+  it "gets BTC to currency data" do
+    btc_currency_data = CoingeckoClient::Client.btc_to_currency
+    expect(btc_currency_data).not_to be nil
+    expect(btc_currency_data).to have_key("rates")
+  end
+
+  it "gets global standard and global defi data" do
+    global_data = CoingeckoClient::Client.global
+    global_defi_data = CoingeckoClient::Client.global_defi
+
+    expect(global_data).not_to be nil
+    expect(global_data).to have_key("data")
+
+    expect(global_defi_data).not_to be nil
+    expect(global_defi_data).to have_key("data")
+  end
+
+  it "gets status updates" do
+    status_data = CoingeckoClient::Client.status_updates(
+      category: 'software_release',
+      project_type: 'coin',
+      per_page: 50,
+      page: 1
+    )
+    expect(status_data).not_to be nil
+    expect(status_data).to have_key("status_updates")
+    
+    status_data_no_params = CoingeckoClient::Client.status_updates
+    expect(status_data_no_params).not_to be nil
+    expect(status_data_no_params).to have_key("status_updates")
+  end
 end
