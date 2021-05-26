@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    coingecko_client (0.1.1)
+    coingecko_client (0.1.2)
       excon (~> 0.75.0)
       json (~> 2.3)
 

@@ -3,8 +3,8 @@ require_relative 'lib/coingecko_client/version'
 Gem::Specification.new do |spec|
   spec.name          = "coingecko_client"
   spec.version       = CoingeckoClient::VERSION
-  spec.authors       = ["Bruck1701"]
-  spec.email         = ["kummel@gmail.com"]
+  spec.authors       = ["Bruck1701", "mark-ruddy"]
+  spec.email         = ["kummel@gmail.com","1markruddy@gmail.com"]
 
   
   spec.summary       = 'A simple coingecko API client '
